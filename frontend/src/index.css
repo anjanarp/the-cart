@@ -1,0 +1,13 @@
+/* Default font + reset */
+:root {
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Remove weird default dark mode */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f1eb;
+}

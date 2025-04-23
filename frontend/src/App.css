@@ -1,0 +1,120 @@
+/* ==== LAYOUT ==== */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* left-align everything like Notion */
+  justify-content: center;
+  height: 100vh;
+  padding-left: 5vw; /* clean left breathing room */
+  background-color: white;
+}
+
+/* Block for heading + subtext */
+.text-block {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+
+/* ==== TYPOGRAPHY ==== */
+
+.intro-text {
+  font-weight: 600; /* slightly lighter for "welcome to" */
+}
+
+.heading {
+  font-size: 3.75rem;
+  margin: 0;
+  color: #1a1a1a;
+  /* border-bottom: 1px dashed red; ← use for baseline testing */
+}
+
+.subtext {
+  font-weight: 200; /* soft, quiet vibe */
+  font-size: 1.25rem;
+  color: #1a1a1a;
+  margin-top: -1.5rem;
+}
+
+
+/* ==== GOOGLE BUTTON ==== */
+
+.google-btn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500; /* solid but not too heavy */
+  letter-spacing: 0;
+  width: 380px; /* wider button for layout balance */
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: white;
+  border: 1px solid #1a1a1a; /* clean black border */
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+  outline: none;
+}
+
+.google-btn:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* subtle lift */
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: 1px; /* tiny nudge to align with text */
+}
+
+
+/* ==== ANIMATED EMOJI SWAP ==== */
+
+/* holds the animated swapping area for "the cart" / 🛒 */
+.cart-swapper {
+  position: relative;
+  display: inline-block;
+  min-width: 6ch; /* fits both "the cart" and emoji cleanly */
+  height: 2em; /* high enough to avoid clipping */
+  vertical-align: -0.9em; /* manually aligns with "welcome to" baseline */
+  overflow: hidden;
+}
+
+/* these are the two swappable pieces, layered on top of each other */
+.cart-text,
+.cart-emoji {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* 🛒 gets a slight font-size shrink for visual balance */
+.cart-emoji {
+  font-size: 0.91em;
+}
+
+/* default visible state */
+.cart-text.show,
+.cart-emoji.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* sliding out and fading */
+.cart-text.hide {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+.cart-emoji.hide {
+  transform: translateX(20px);
+  opacity: 0;
+}
