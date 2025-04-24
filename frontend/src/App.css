@@ -3,10 +3,10 @@
 .login-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* left-align everything like Notion */
+  align-items: flex-start; 
   justify-content: center;
   height: 100vh;
-  padding-left: 5vw; /* clean left breathing room */
+  padding-left: 5vw; 
   background-color: white;
 }
 
@@ -20,18 +20,17 @@
 /* ==== TYPOGRAPHY ==== */
 
 .intro-text {
-  font-weight: 600; /* slightly lighter for "welcome to" */
+  font-weight: 600; 
 }
 
 .heading {
   font-size: 3.75rem;
   margin: 0;
   color: #1a1a1a;
-  /* border-bottom: 1px dashed red; ← use for baseline testing */
 }
 
 .subtext {
-  font-weight: 200; /* soft, quiet vibe */
+  font-weight: 200; 
   font-size: 1.25rem;
   color: #1a1a1a;
   margin-top: -1.5rem;
@@ -42,15 +41,15 @@
 
 .google-btn {
   font-family: 'Inter', sans-serif;
-  font-weight: 500; /* solid but not too heavy */
+  font-weight: 500; 
   letter-spacing: 0;
-  width: 380px; /* wider button for layout balance */
+  width: 380px; /
   justify-content: center;
   display: flex;
   align-items: center;
   gap: 0.75rem;
   background-color: white;
-  border: 1px solid #1a1a1a; /* clean black border */
+  border: 1px solid #1a1a1a; 
   border-radius: 8px;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -60,7 +59,7 @@
 }
 
 .google-btn:hover {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* subtle lift */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .icon {
@@ -69,7 +68,7 @@
   display: inline-block;
   vertical-align: middle;
   position: relative;
-  top: 1px; /* tiny nudge to align with text */
+  top: 1px; 
 }
 
 
@@ -79,9 +78,9 @@
 .cart-swapper {
   position: relative;
   display: inline-block;
-  min-width: 6ch; /* fits both "the cart" and emoji cleanly */
-  height: 2em; /* high enough to avoid clipping */
-  vertical-align: -0.9em; /* manually aligns with "welcome to" baseline */
+  min-width: 6ch; 
+  height: 2em; 
+  vertical-align: -0.9em;
   overflow: hidden;
 }
 
