@@ -1,61 +1,80 @@
-/* ==== LAYOUT ==== */
-
-.login-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
-  justify-content: center;
+/* ==== FIXED VIEWPORT ==== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   height: 100vh;
-  padding-left: 5vw; 
+  width: 100vw;
+  font-family: 'Arial Narrow', sans-serif;
+}
+
+/* ==== LAYOUT ==== */
+.landing-page {
+  display: flex;
+  min-width: 1440px;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 4rem 6rem;
+  box-sizing: border-box;
+  position: relative;
   background-color: white;
 }
 
-/* Block for heading + subtext */
-.text-block {
-  text-align: left;
-  margin-bottom: 2rem;
+/* ==== CONTENT BLOCKS ==== */
+.left-block {
+  flex-shrink: 0;
+  width: 500px;
 }
 
+.right-block {
+  flex-shrink: 0;
+  width: 750px;
+  height: auto;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+/* ==== LOGO ==== */
+.login-logo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 
 /* ==== TYPOGRAPHY ==== */
-
-.intro-text {
-  font-weight: 600; 
+.tagline {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  line-height: 1.4;
+  color: #000;
+  margin-bottom: 2.5rem;
+  white-space: pre-line;
+  /* Keeps your line breaks */
 }
-
-.heading {
-  font-size: 3.75rem;
-  margin: 0;
-  color: #1a1a1a;
-}
-
-.subtext {
-  font-weight: 200; 
-  font-size: 1.25rem;
-  color: #1a1a1a;
-  margin-top: -1.5rem;
-}
-
 
 /* ==== GOOGLE BUTTON ==== */
-
 .google-btn {
   font-family: 'Inter', sans-serif;
-  font-weight: 500; 
-  letter-spacing: 0;
-  width: 380px; /
-  justify-content: center;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: 380px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
   background-color: white;
-  border: 1px solid #1a1a1a; 
-  border-radius: 8px;
-  padding: 0.75rem 1.5rem;
+  border: 1px solid black;
+  padding: 0.75rem 1.75rem;
   font-size: 1rem;
+  box-shadow: 4px 4px 0 black;
   cursor: pointer;
-  transition: box-shadow 0.2s ease;
-  outline: none;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .google-btn:hover {
@@ -65,54 +84,4 @@
 .icon {
   height: 20px;
   width: 20px;
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  top: 1px; 
-}
-
-
-/* ==== ANIMATED EMOJI SWAP ==== */
-
-/* holds the animated swapping area for "the cart" / 🛒 */
-.cart-swapper {
-  position: relative;
-  display: inline-block;
-  min-width: 6ch; 
-  height: 2em; 
-  vertical-align: -0.9em;
-  overflow: hidden;
-}
-
-/* these are the two swappable pieces, layered on top of each other */
-.cart-text,
-.cart-emoji {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  text-align: left;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-.cart-emoji {
-  font-size: 0.91em;
-}
-
-/* default visible state */
-.cart-text.show,
-.cart-emoji.show {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-/* sliding out and fading */
-.cart-text.hide {
-  transform: translateX(-20px);
-  opacity: 0;
-}
-
-.cart-emoji.hide {
-  transform: translateX(20px);
-  opacity: 0;
 }

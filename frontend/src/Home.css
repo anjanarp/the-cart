@@ -1,0 +1,115 @@
+/* ==== PAGE WRAPPER ==== */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* ==== CONTAINER ==== */
+.home-container {
+  min-width: 1440px;
+  height: 100vh;
+  padding: 4rem 6rem;
+  box-sizing: border-box;
+  position: relative;
+  font-family: 'Arial Narrow', sans-serif;
+  background-color: white;
+  overflow: hidden;
+}
+
+
+/* ==== LOGO ==== */
+.home-logo {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ==== TITLE ==== */
+.your-carts {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -4px;
+  text-transform: uppercase;
+  line-height: 1;
+  color: #000;
+  margin-bottom: .7rem;
+  z-index: 2;
+  position: relative;
+  margin-left: 15rem;
+}
+
+/* ==== SCROLLABLE CART AREA ==== */
+.cart-scroll-area {
+  overflow-y: auto;
+  position: absolute;
+  top: 10rem;
+  /* below title */
+  bottom: 6rem;
+  /* above input */
+  left: 6rem;
+  right: 6rem;
+  padding-right: 1rem;
+  margin-left: 15rem;
+  padding-top: 0.75rem;
+  width: 35rem;
+}
+
+/* ==== CART LIST ==== */
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cart-entry {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -1.7px;
+  text-transform: uppercase;
+  line-height: .7;
+  color: #000;
+  white-space: pre-line;
+}
+
+.cart-count {
+  color: rgb(175, 169, 169);
+  margin-left: .75rem;
+}
+
+/* ==== INPUT FIELD ==== */
+.cart-input {
+  position: absolute;
+  bottom: 2rem;
+  left: 6rem;
+  font-family: 'Arial Narrow', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: #000;
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 0.25rem 0;
+  width: 400px;
+  background: transparent;
+  outline: none;
+  margin-left: 15rem;
+}
+
+.cart-input::placeholder {
+  color: rgb(175, 169, 169);
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
