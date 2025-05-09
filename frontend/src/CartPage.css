@@ -1,0 +1,206 @@
+/* === PAGE TYPOGRAPHY BASE === */
+/* default font for major cart page elements */
+.cartpage-header {
+    font-family: 'Arial Narrow', sans-serif;
+  }
+  
+  /* === TOP-LEVEL CONTAINER FOR HEADER === */
+  /* contains back arrow, input, and title block */
+  .cartpage-title-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 0.1rem;
+    padding-left: 4rem;
+    font-family: 'Arial Narrow', sans-serif;
+  }
+  
+  /* === TITLE BLOCK === */
+  /* contains cart title and item count stacked vertically */
+  .cartpage-title-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-top: -2rem;
+  }
+  
+  /* === CART NAME (TOP OF PAGE) === */
+  .cart-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -4px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 0;
+    color: #000;
+  }
+  
+  /* === ITEM COUNT LABEL BELOW TITLE === */
+  .cart-count-label {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: rgb(175, 169, 169);
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: -1.7px;
+  }
+  
+  /* === BACK ARROW STYLE === */
+  .back-arrow {
+    font-size: 5.5rem;
+    font-weight: 1000;
+    letter-spacing: -2px;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 1.5rem;
+    padding-left: 1rem;
+    user-select: none;
+    transition: transform 0.2s ease;
+  }
+  
+  /* back arrow hover animation */
+  .back-arrow:hover {
+    transform: translateX(-4px);
+  }
+  
+  /* === TOP ROW CONTAINING BACK ARROW + INPUT === */
+  .cartpage-top-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-family: 'Arial Narrow', sans-serif;
+  }
+  
+  /* === INPUT FIELD FOR DROPPING PRODUCT LINKS === */
+  .cartpage-input {
+    font-family: 'Arial Narrow', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: #000;
+    border: none;
+    border-bottom: 4px solid black;
+    padding: 0.25rem 0;
+    width: 400px;
+    background: transparent;
+    outline: none;
+    margin-right: 4rem;
+    margin-top: -1rem;
+  }
+  
+  /* input placeholder styling */
+  .cartpage-input::placeholder {
+    color: rgb(175, 169, 169);
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+  
+  /* ===  LOGO STYLING  === */
+  .cartpage-logo {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    z-index: 1;
+  }
+  
+  /* === SCROLLABLE PRODUCT AREA === */
+  /* scrolls are independent from the rest of the page */
+  .product-scroll-area {
+    position: absolute;
+    top: 14rem;        
+    bottom: 4rem;     
+    left: 6rem;
+    right: 6rem;
+    overflow-y: auto;
+    padding-right: 1rem;
+    padding-top: 2rem;
+  }
+  
+  /* === PRODUCT GRID === */
+  /* widgets in 3 columns with spacing */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding-right: 10rem;
+    padding-bottom: 4rem;
+  }
+  
+  /* === INDIVIDUAL PRODUCT CARD === */
+  .product-card {
+    padding: 0;
+    position: relative;
+  }
+  
+  /* === PRODUCT IMAGE === */
+  .product-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+  /* === INFO ROW BELOW IMAGE === */
+  /* includes title, price, and delete button */
+  .product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.5rem;
+    font-family: 'Arial Narrow', sans-serif;
+  }
+  
+  /* === STACKED TITLE + PRICE === */
+  .product-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 85%;
+  }
+  
+  /* === PRODUCT TITLE LINK === */
+  .product-title {
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+  
+  /* title hover underline */
+  .product-title:hover {
+    text-decoration: underline;
+  }
+  
+  /* === PRICE STYLING === */
+  .product-price {
+    color: rgb(175, 169, 169);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 0.25rem;
+  }
+  
+  /* === DELETE BUTTON FOR WIDGET === */
+  .delete-button {
+    font-weight: bold;
+    font-size: 1.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    padding: 0;
+    color: black;
+    line-height: 1;
+  }
+  
